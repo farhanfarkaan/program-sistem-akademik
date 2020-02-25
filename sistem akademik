@@ -1,0 +1,74 @@
+package programsiam;
+import java.util.Scanner;
+
+    class Mahasiswa{
+    String nama;
+   
+    long NIM;
+    int M;
+    
+    int jumlahMK;
+    String jadwal;
+
+    Mahasiswa(String nama,long NIM,int MK){
+        this.nama = nama;
+        this.NIM = NIM;
+        this.M = MK;
+       
+        
+        System.out.println("Nama : " + this.nama);
+        System.out.println("NIM : " + this.NIM);
+        
+        System.out.println("Mata Kuliah \n " + hasil(M));
+        
+    }
+       private String hasil(int M){
+        switch (M) {
+            case 1:
+                return "Pemograman Lanjutan \n5 sks";
+            case 2:
+                return "Arsitektur & Organisasi Komputer \n3 SKS";
+            case 3:
+                return "Sistem Operasi \n3 SKS";
+            case 4:
+                return "Bahasa Indonesia \n2 SKS";
+            case 5:
+                return "Kewarganegaraan  \n2 SKS";
+            case 6:
+                return "Pendidikan Pancasila \n2 SKS";
+            case 7 : 
+                return "Senin = Kewarganegaraan & Sistem Operasi \n Selasa = Arsitektur dan Oganisasi Komputer \n Rabu = Pendidikan Pancasila & Pemrograman Lanjutan \n Kamis = Interaksi Manusia Komputer & Praktikum Pemrograman Lanjutan \n Jumat = Bahasa Indonesia & Pemrograman Lanjutan ";
+            default:
+                return "Inputan anda salah";
+        }
+        }
+   
+    }
+
+        public class programsiam {
+        public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Masukan nama : " );
+        String nama = s.nextLine();
+        System.out.println("Masukan NIM : ");
+        long NIM = s.nextLong();
+        System.out.println("Mata Kuliah : ");
+        System.out.println(" 1.Pemrograman Lanjutan \n 2.Arsitektur & Organisasi Komputer \n 3.Sistem Operasi \n 4.BahasaIndonesia \n 5.Kewarganegaraan \n 6.Pendidikan Pacasila \n 7. Jadwal Pelajaran ");
+        System.out.println("Masukan Nomor Mata Kuliah : ");
+        
+        
+        int MK = s.nextInt();
+    
+        Mahasiswa oke = new Mahasiswa(nama,NIM,MK);
+      
+    }
+}
+     
+ 
+   
+
+   
+
+    
+       
+  
